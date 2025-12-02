@@ -28,7 +28,7 @@ The app includes **10** pages that explain how the fitness app relates to differ
 
 Each page describes how the app operates ethically within that framework.
 
-### 4. Hosted on GitHub Pages
+### 3. Hosted on GitHub Pages
 
 The website is live and accessible here:
 
