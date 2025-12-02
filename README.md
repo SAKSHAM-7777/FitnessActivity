@@ -1,47 +1,83 @@
-##Fitness Project – Health Tracking & Community App
 
-Welcome to the Fitness Project, a simple and user-friendly web application designed to help users track their health, connect with others, and learn about ethical principles behind the app design.
 
-This project includes multiple webpages that explain how the app works using ethical theories such as Subjective Relativism, Cultural Relativism, Utilitarianism, and more. The app also includes a Login Page that allows any user to sign in.
+# Fitness Project – Health Tracking & Community App
+
+Welcome to the **Fitness Project**, a simple and interactive web application designed to help users track their fitness progress, connect with peers, and understand ethical principles behind the app.
+
+This project includes multiple webpages, a working login system, and clear explanations of **9 ethical theories**.
+
+---
 
 ## Features
-##User Login Page
 
-A simple and responsive login page (login.html) where users can enter:
-Use this 
-USER = "saksham";
-PASS = "12345";
+### 1. User Login Page
+
+A clean and responsive login page (`login.html`) where users can enter:
+
+* **Username:** `saksham`
+* **Password:** `12345`
+
+These are the default credentials used in the project.
+
+---
+
+### 2. Ethical Theory Pages
+
+The app includes **nine** pages that explain how the fitness app relates to different ethical theories:
+
+* **Subjective Relativism**
+* **Cultural Relativism**
+* **Utilitarianism**
+* **Objectivism**
+* **Social Contract Theory**
+* **Virtue Ethics**
+* **Ethics of Care**
+* **Kantianism**
+* **Divine Command Theory**
+
+Each page describes how the app operates ethically within that framework.
+
+---
+
+### 3. Easy Website Navigation
+
+* Simple navigation bar on every page
+* Smooth transitions between sections
+* Clear and accessible layout
+
+---
+
+### 4. Hosted on GitHub Pages
+
+The website is live and accessible here:
+
+**[https://saksham-7777.github.io/FitnessProject/](https://saksham-7777.github.io/FitnessProject/)**
+
+---
+
+## Project Structure
+
+```
+FitnessProject/
+│── index.html
+│── login.html
+│── ethics.html
+│── features.html
+│── team.html
+│── workout.html
+│── get-involved.html
+│── style.css
+│── (optional js files)
+└── README.md
+```
 
 
-Password
 
-✔ Ethical Theory Pages
+## How to Run Locally
 
-Each page explains how the app follows different ethical principles:
+1. Download or clone this repository
+2. Open the project folder
+3. Double-click **login.html** or **index.html**
+4. Make sure all files stay in the same folder for proper linking
 
-Page 1: Subjective Relativism
 
-Page 2: Cultural Relativism
-
-Page 3: Utilitarianism (profit + benefit for community)
-
-Page 4: Objectivism
-
-Page 5: Social Contract Theory
-
-Page 6: Virtue Ethics
-
-Page 7: Ethics of Care
-
-Page 8: Kantianism
-
-Page 9: Divine Command Theory
-
-✔ Easy Website Navigation
-
-Simple links connecting all pages for easy reading.
-
-✔ Hosted on GitHub Pages
-
-Your project is live at:
-👉 https://saksham-7777.github.io/FitnessProject/
