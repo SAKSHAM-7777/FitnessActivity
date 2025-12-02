@@ -4,8 +4,8 @@ Welcome to the Fitness Project, a simple and user-friendly web application desig
 
 This project includes multiple webpages that explain how the app works using ethical theories such as Subjective Relativism, Cultural Relativism, Utilitarianism, and more. The app also includes a Login Page that allows any user to sign in.
 
-🚀 Features
-✔ User Login Page
+## Features
+##User Login Page
 
 A simple and responsive login page (login.html) where users can enter:
 Use this 
