@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Workout | Saksham's Fitness App</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    // Check login token
+    const token = localStorage.getItem('token');
+    if (!token) window.location.href = 'login.html';
+
+    // Logout function
+    function logout() {
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      window.location.href = 'login.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('logoutBtn').addEventListener('click', logout);
+    });
+  </script>
+  <style>
+    /* Card style for workouts */
+    .workout-card {
+      background: #e8f5e9;
+      border: 1px solid #aacd8c;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(72, 142, 83, 0.2);
+    }
+
+    .workout-info {
+      flex-grow: 1;
+    }
+
+    .workout-card button {
+      background: #66bb6a;
+      border: none;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .workout-card button:hover {
+      background: #4caf50;
+    }
+
+    #workoutForm input {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #aacd8c;
+    }
+
+    #workoutForm button {
+      padding: 8px 15px;
+      margin: 5px;
+      border-radius: 8px;
+      background: #66bb6a;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #workoutForm button:hover {
+      background: #4caf50;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Workout Tracker</h1>
+  <nav>
+    <a href="index.html">Subjective Relativism</a>
+    <a href="about.html">About</a>
+    <a href="ethics.html">Ethics</a>
+    <a href="features.html">Divine Command Theory</a>
+    <a href="community.html">Cultural Relativism</a>
+    <a href="team.html">Ethical Egoism</a>
+    <a href="get-involved.html">Kantianism</a>
+    <a href="faq.html">Social Contract Theory</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="#" id="logoutBtn">Logout</a>
+  </nav>
+</header>
+
+<div class="container">
+  <form id="workoutForm">
+    <input type="date" id="date" required />
+    <input type="text" id="type" placeholder="Exercise Type (e.g. Running)" required />
+    <input type="number" id="duration" placeholder="Duration (minutes)" min="1" required />
+    <button type="submit">Add Workout</button>
+  </form>
+
+  <h2>Your Workouts</h2>
+  <div id="workoutsList"></div>
+</div>
+
+<script>
+  const workoutsList = document.getElementById('workoutsList');
+
+  // Fetch workouts from localStorage
+  function getWorkouts() {
+    return JSON.parse(localStorage.getItem('workouts') || '[]');
+  }
+
+  // Save workouts to localStorage
+  function saveWorkouts(workouts) {
+    localStorage.setItem('workouts', JSON.stringify(workouts));
+  }
+
+  // Display workouts as cards
+  function displayWorkouts(workouts) {
+    workoutsList.innerHTML = '';
+    if (workouts.length === 0) {
+      workoutsList.innerHTML = '<p>No workouts recorded yet.</p>';
+      return;
+    }
+    workouts.forEach((w, index) => {
+      const card = document.createElement('div');
+      card.className = 'workout-card';
+
+      const info = document.createElement('div');
+      info.className = 'workout-info';
+      info.textContent = `${w.date} - ${w.type} - ${w.duration} min`;
+
+      const delBtn = document.createElement('button');
+      delBtn.textContent = 'Delete';
+      delBtn.addEventListener('click', () => {
+        workouts.splice(index, 1);
+        saveWorkouts(workouts);
+        displayWorkouts(workouts);
+      });
+
+      card.appendChild(info);
+      card.appendChild(delBtn);
+      workoutsList.appendChild(card);
+    });
+  }
+
+  document.getElementById('workoutForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const date = document.getElementById('date').value;
+    const type = document.getElementById('type').value.trim();
+    const duration = parseInt(document.getElementById('duration').value, 10);
+
+    if (!type || !duration || !date) return alert('Please fill in all fields');
+
+    const workouts = getWorkouts();
+    workouts.push({ date, type, duration });
+    saveWorkouts(workouts);
+    displayWorkouts(workouts);
+
+    document.getElementById('workoutForm').reset();
+  });
+
+  // Display on page load
+  displayWorkouts(getWorkouts());
+</script>
+</body>
+</html>

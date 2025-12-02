@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="login-box">
+    <h2>Login</h2>
+
+    <input type="text" id="username" placeholder="Enter username">
+    <input type="password" id="password" placeholder="Enter password">
+
+    <button onclick="login()">Login</button>
+
+    <p id="error" style="color:red; margin-top:10px;"></p>
+  </div>
+
+<script>
+  // Predefined username & password
+  const USER = "saksham";
+  const PASS = "12345";
+
+  function login() {
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    if (u === USER && p === PASS) {
+      localStorage.setItem("token", "true"); // ✅ store token
+      localStorage.setItem("user", u);       // optional: store username
+      window.location.href = "index.html";   // redirect to home page
+    } else {
+      document.getElementById("error").innerText = "Invalid username or password";
+    }
+  }
+</script>
+
+</body>
+</html>
