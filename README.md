@@ -18,13 +18,13 @@ The app includes **10** pages that explain how the fitness app relates to differ
 
 * **Subjective Relativism**
 * **Cultural Relativism**
-* **Utilitarianism**
-* **Objectivism**
+* **Divine Command**
+* **Ethical Egoism**
+* **Act utilitrianism**
 * **Social Contract Theory**
+* **Rawls Theory of Justice**
 * **Virtue Ethics**
-* **Ethics of Care**
-* **Kantianism**
-* **Divine Command Theory**
+
 
 Each page describes how the app operates ethically within that framework.
 
