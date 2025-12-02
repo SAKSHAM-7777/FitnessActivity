@@ -9,7 +9,7 @@
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 500px;   /* adjust size if needed */
+  max-width: 700px;
   margin: 0 auto;
   border-radius: 12px;
 }
@@ -212,6 +212,7 @@ footer {
 .btn.glow {
   animation: none !important;
 }
+
 
 
 
