@@ -6,7 +6,7 @@
 }
 
 body {
-  background: url('../ufvsus_cover.jpg') no-repeat center center fixed;
+  background: url('ufvsus_cover.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #2e3e2f;
   min-height: 100vh;
@@ -195,3 +195,4 @@ footer {
 .btn.glow {
   animation: none !important;
 }
+
