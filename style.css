@@ -10,7 +10,7 @@
   height: 0;
   overflow: hidden;
   max-width: 500px;   /* adjust size if needed */
-  margin: 20px auto;
+  margin: 0 auto;
   border-radius: 12px;
 }
 
@@ -212,6 +212,7 @@ footer {
 .btn.glow {
   animation: none !important;
 }
+
 
 
 
