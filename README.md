@@ -1,4 +1,4 @@
-itness Project – Health Tracking & Community App
+##Fitness Project – Health Tracking & Community App
 
 Welcome to the Fitness Project, a simple and user-friendly web application designed to help users track their health, connect with others, and learn about ethical principles behind the app design.
 
